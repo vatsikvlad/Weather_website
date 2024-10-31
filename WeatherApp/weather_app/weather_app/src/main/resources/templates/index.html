@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Weather</title>
+</head>
+<body>
+    <div class="app-name">WeatherToday</div>
+        <center>
+            <form action="/weather" method="get">
+                <input name="city" placeholder="Search your city" type="search" class="input" required="">
+                <button type="submit" class="search-button">Search</button>    
+            </form>
+
+            <div class="information-container">
+                <div>Teperature: <span th:text="${temperature}"></span> K</div>
+                <div>Feels like: <span th:text="${feelsLike}"></span> K</div>
+                <div>Max temperature: <span th:text="${maxTemp}"></span> K</div>
+                <div>Min temperature: <span th:text="${minTemp}"></span> K</div>
+                <div>Pressure: <span th:text="${pressure}"></span> hPa</div>
+                <br>
+
+                <div>Teperature: <span th:text="${temperature_C}"></span> C</div>
+                <div>Feels like: <span th:text="${feelsLike_C}"></span> C</div>
+                <div>Max temperature: <span th:text="${maxTemp_C}"></span> C</div>
+                <div>Min temperature: <span th:text="${minTemp_C}"></span> C</div>
+                <div>Pressure: <span th:text="${pressure_C}"></span> hPa</div>
+                <br>
+
+                <div>Teperature: <span th:text="${temperature_F}"></span> F</div>
+                <div>Feels like: <span th:text="${feelsLike_F}"></span> F</div>
+                <div>Max temperature: <span th:text="${maxTemp_F}"></span> F</div>
+                <div>Min temperature: <span th:text="${minTemp_F}"></span> F</div>
+                <div>Pressure: <span th:text="${pressure_F}"></span> hPa</div>
+            </div>
+        </center>
+</body>
+</html>
