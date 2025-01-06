@@ -2,26 +2,24 @@ package com.weather.weather_app;
 
 public class WeatherCelsius extends WeatherBase implements IWeather{
 
-    double kelvin = 273.15;
-
     @Override
-    public double getTemperature(double temp) {
-        return temp - kelvin; 
+    public double getTemperature() {
+        return  temperature - kelvin; 
     }
 
     @Override
-    public double getFeelsLike(double feels_like) {
-        return feels_like - kelvin;
+    public double getFeelsLike() {
+        return feelsLike - kelvin;
     }
 
     @Override
-    public double getTempMax(double temp_max) {
-        return temp_max - kelvin;
+    public double getTempMax() {
+        return maxTemp - kelvin;
     }
 
     @Override
-    public double getTempMin(double temp_min) {
-        return temp_min - kelvin;
+    public double getTempMin() {
+        return minTemp - kelvin;
     }
     
 }

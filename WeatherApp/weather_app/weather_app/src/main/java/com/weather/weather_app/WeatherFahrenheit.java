@@ -2,28 +2,27 @@ package com.weather.weather_app;
 
 public class WeatherFahrenheit extends WeatherBase implements IWeather{
 
-    double kelvin = 273.15;
     double num = 1.8;
     double thirtyTwo = 32;
 
     @Override
-    public double getTemperature(double temp) {
-        return calc(temp);
+    public double getTemperature() {
+        return calc(temperature);
     }
 
     @Override
-    public double getFeelsLike(double feels_like) {
-        return calc(feels_like);
+    public double getFeelsLike() {
+        return calc(feelsLike);
     }
 
     @Override
-    public double getTempMax(double temp_max) {
-        return calc(temp_max);
+    public double getTempMax() {
+        return calc(maxTemp);
     }
 
     @Override
-    public double getTempMin(double temp_min) {
-        return calc(temp_min);
+    public double getTempMin() {
+        return calc(minTemp);
     }
     
     private double calc(double variable){

@@ -34,11 +34,14 @@
 
             <div class="information-container">
                 <div id="temperature-K">
-                    <div>Temperature: <span th:text="${temperature}"></span> K</div>
-                    <div>Feels like: <span th:text="${feelsLike}"></span> K</div>
-                    <div>Max temperature: <span th:text="${maxTemp}"></span> K</div>
-                    <div>Min temperature: <span th:text="${minTemp}"></span> K</div>
-                    <div>Pressure: <span th:text="${pressure}"></span> hPa</div>
+                    <li th:each="kel : ${kelvins}">
+                        <div><span th:text="${kel.date}"></span></div>
+                        <div>Temperature: <span th:text="${kel.temperature}"></span> K</div>
+                        <div>Feels like: <span th:text="${kel.feelsLike}"></span> K</div>
+                        <div>Max temperature: <span th:text="${kel.maxTemp}"></span> K</div>
+                        <div>Min temperature: <span th:text="${kel.minTemp}"></span> K</div>
+                        <div>Pressure: <span th:text="${kel.pressure}"></span> hPa</div>
+                    </li>
                 </div>
 
                 <div id="temperature-C" style="display: none;">

@@ -3,23 +3,23 @@ package com.weather.weather_app;
 public class Weather extends WeatherBase implements IWeather{
     
     @Override
-    public double getTemperature(double temp) {
-        return temp;
+    public double getTemperature() {
+        return temperature;
     }
 
     @Override
-    public double getFeelsLike(double feels_like) {
-        return feels_like;
+    public double getFeelsLike() {
+        return feelsLike;
     }
 
     @Override
-    public double getTempMax(double temp_max) {
-        return temp_max;
+    public double getTempMax() {
+        return maxTemp;
     }
 
     @Override
-    public double getTempMin(double temp_min) {
-        return temp_min;
+    public double getTempMin() {
+        return minTemp;
     }
 
 }
