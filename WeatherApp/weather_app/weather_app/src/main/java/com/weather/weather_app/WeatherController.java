@@ -16,7 +16,7 @@ public class WeatherController {
 
     @GetMapping("/home")
     public String home() {
-        return "index";  // Це поверне файл src/main/resources/templates/index.html
+        return "index";
     }
 
     @GetMapping("/weather")
@@ -32,7 +32,6 @@ public class WeatherController {
             WeatherCelsius celsius = new WeatherCelsius();
             WeatherFahrenheit fahrenheit = new WeatherFahrenheit();
             
-            // Передаємо дані в модель для відображення в HTML
             model.addAttribute("temperature", weather.getTemperature(json.getJSONObject("main").getDouble("temp")));
             model.addAttribute("feelsLike", weather.getFeelsLike(json.getJSONObject("main").getDouble("feels_like")));
             model.addAttribute("maxTemp", weather.getTempMax(json.getJSONObject("main").getDouble("temp_max")));
